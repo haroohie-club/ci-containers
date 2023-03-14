@@ -3,8 +3,11 @@ FROM devkitpro/devkitppc
 LABEL "org.opencontainers.image.authors"="Haroohie Translation Club"
 LABEL "org.opencontainers.image.vendor"="Haroohie Translation Club"
 LABEL "org.opencontainers.image.source"="https://github.com/haroohie-club/ci-containers"
+LABEL "org.opencontainers.image.url"="https://github.com/haroohie-club/ci-containers"
+LABEL "org.opencontainers.image.version"="main"
 LABEL "org.opencontainers.image.title"="Heiretsu CI"
 LABEL "org.opencontainers.image.description"="CI container for building the translated Suzumiya Haruhi no Heiretsu patch"
+LABEL "org.opencontainers.image.licenses"="AGPL-3.0"
 
 RUN wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb; \
     dpkg -i packages-microsoft-prod.deb; \
