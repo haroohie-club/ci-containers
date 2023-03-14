@@ -2,6 +2,7 @@ FROM devkitpro/devkitarm
 
 LABEL "org.haroohie.author"="Haroohie Translation Club"
 LABEL version="1.0"
+LABEL org.opencontainers.image.source https://github.com/haroohie-club/ci-containers
 LABEL org.opencontainers.image.description "CI container for building the translated Suzumiya Haruhi no Chokuretsu patch"
 
 RUN wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb; \
