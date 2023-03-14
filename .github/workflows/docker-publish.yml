@@ -1,7 +1,9 @@
-name: Build & publish drill4net images
+name: Build & publish Haroohie images
 on:
-  release:
-    types: [published]
+  push:
+    branches: [ "main" ]
+    # Publish semver tags as releases.
+    tags: [ 'v*.*.*' ]
 
 env:
   REGISTRY: ghcr.io
