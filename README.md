@@ -1,2 +1,2 @@
-# ci-containers
-The docker containers for the Haroohie Translation Club's CI builds
+# Haroohie Translation Club CI Docker Containers
+The docker containers for the Haroohie Translation Club's CI builds.
