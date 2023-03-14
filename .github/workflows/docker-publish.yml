@@ -23,7 +23,7 @@ jobs:
           - dockerfile: ./heiretsu-devkitppc/Dockerfile
             image: ghcr.io/haroohie-club/heiretsu-devkitppc
             title: Heiretsu CI
-            description: "CI container for building the translated Suzumiya Haruhi no Heiretsu patch"
+            description: CI container for building the translated Suzumiya Haruhi no Heiretsu patch
     permissions:
       contents: read
       packages: write
@@ -47,8 +47,8 @@ jobs:
           labels: |
             org.opencontainers.image.authors="Haroohie Translation Club"
             org.opencontainers.image.vendor="Haroohie Translation Club"
-            org.opencontainers.image.title=${{ matrix.title }}
-            org.opencontainers.image.description=${{ matrix.description }}
+            org.opencontainers.image.title="${{ matrix.title }}"
+            org.opencontainers.image.description="${{ matrix.description }}"
 
       - name: Build and push Docker images
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
