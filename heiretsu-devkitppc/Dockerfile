@@ -34,5 +34,5 @@ RUN cd ~; \
     cd avthp; \
     cmake CMakeLists.txt; \
     make; \
-    mv avthp /; \
+    mv avthp /bin/; \
     cd /;
