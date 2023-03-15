@@ -14,5 +14,6 @@ RUN wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod
 
 RUN wget https://haroohie.blob.core.windows.net/ci-containers/xdelta3.zip; \
     unzip xdelta3.zip; \
+    rm xdelta3.zip; \
     chmod +x xdelta3; \
-    rm xdelta3.zip;
+    mv xdelta3 /bin/;
