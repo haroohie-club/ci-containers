@@ -1,5 +1,6 @@
 name: Build & publish Haroohie images
 on:
+  workflow_dispatch:
   push:
     branches: [ "main" ]
     # Publish semver tags as releases.
