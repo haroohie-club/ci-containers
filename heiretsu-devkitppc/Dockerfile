@@ -1,18 +1,14 @@
 FROM devkitpro/devkitppc
 
-RUN wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb && \
-    dpkg -i packages-microsoft-prod.deb && \
-    apt-get update && \
-    apt-get install -y powershell
-
-RUN wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb && \
+RUN wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb && \
     dpkg -i packages-microsoft-prod.deb && \
     rm packages-microsoft-prod.deb && \
-    apt-get update && \
-    apt-get install -y dotnet-sdk-6.0 libfontconfig1
+    apt update && \
+    apt install -y powershell
 
-RUN apt-get update && \
-    apt-get install -y ffmpeg libavcodec-dev libavformat-dev libavresample-dev libavutil-dev libswresample-dev libswscale-dev gcc g++
+RUN apt install -y dotnet-sdk-8.0 libfontconfig1
+
+RUN apt install -y ffmpeg libavcodec-dev libavformat-dev libavresample-dev libavutil-dev libswresample-dev libswscale-dev gcc g++
 
 RUN wget https://wit.wiimm.de/download/wit-v3.05a-r8638-x86_64.tar.gz && \
     tar xfz wit-v3.05a-r8638-x86_64.tar.gz && \
