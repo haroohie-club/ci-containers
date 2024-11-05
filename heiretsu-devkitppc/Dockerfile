@@ -6,7 +6,7 @@ RUN wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod
     apt update && \
     apt install -y powershell
 
-RUN apt install -y dotnet-sdk-8.0 libfontconfig1 ffmpeg libavcodec-dev libavformat-dev libavresample-dev libavutil-dev libswresample-dev libswscale-dev gcc g++
+RUN apt install -y dotnet-sdk-8.0 libfontconfig1 ffmpeg libavcodec-dev libavformat-dev libavresample-dev libavutil-dev libswresample-dev libswscale-dev gcc g++ python3-distutils
 
 RUN wget https://wit.wiimm.de/download/wit-v3.05a-r8638-x86_64.tar.gz && \
     tar xfz wit-v3.05a-r8638-x86_64.tar.gz && \
@@ -22,3 +22,7 @@ RUN cd ~ && \
     mv avthp /bin/ && \
     cd / && \
     rm -rf ~/avthp
+
+RUN wget https://bootstrap.pypa.io/pip/3.7/get-pip.py && \
+    python ./get-pip.py && \
+    pip install boto3
