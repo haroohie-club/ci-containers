@@ -6,9 +6,7 @@ RUN wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod
     apt update && \
     apt install -y powershell
 
-RUN apt install -y dotnet-sdk-8.0 libfontconfig1
-
-RUN apt install -y ffmpeg libavcodec-dev libavformat-dev libavresample-dev libavutil-dev libswresample-dev libswscale-dev gcc g++
+RUN apt install -y dotnet-sdk-8.0 libfontconfig1 ffmpeg libavcodec-dev libavformat-dev libavresample-dev libavutil-dev libswresample-dev libswscale-dev gcc g++
 
 RUN wget https://wit.wiimm.de/download/wit-v3.05a-r8638-x86_64.tar.gz && \
     tar xfz wit-v3.05a-r8638-x86_64.tar.gz && \
@@ -22,4 +20,5 @@ RUN cd ~ && \
     cmake CMakeLists.txt && \
     make && \
     mv avthp /bin/ && \
-    cd /
+    cd / && \
+    rm -rf ~/avthp
