@@ -25,6 +25,10 @@ jobs:
             image: ghcr.io/haroohie-club/heiretsu-devkitppc
             title: Heiretsu CI
             description: CI container for building the translated Suzumiya Haruhi no Heiretsu patch
+          - dockerfile: ./sl-flatpack/Dockerfile
+            image: ghcr.io/haroohie-club/sl-flatpak
+            title: Serial Loops Flatpak Builder
+            description: CI container for building flatpak releases of Serial Loops
     permissions:
       contents: read
       packages: write
