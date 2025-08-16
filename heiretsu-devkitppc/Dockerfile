@@ -1,6 +1,6 @@
 FROM devkitpro/devkitppc
 
-RUN echo "deb http://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list
+RUN echo "deb http://deb.debian.org/debian-security bullseye-security main" > /etc/apt/sources.list.d/bullseye.list
 
 RUN wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb && \
     dpkg -i packages-microsoft-prod.deb && \
@@ -8,7 +8,7 @@ RUN wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod
     apt update && \
     apt install -y powershell
 
-RUN apt install -y dotnet-sdk-8.0 libfontconfig1 ffmpeg libavcodec-dev libavformat-dev libavresample-dev libavutil-dev libswresample-dev libswscale-dev gcc g++
+RUN apt install -y dotnet-sdk-8.0 libfontconfig1 ffmpeg libavcodec-dev libavformat-dev libavutil-dev libswresample-dev libswscale-dev gcc g++
 
 RUN wget https://wit.wiimm.de/download/wit-v3.05a-r8638-x86_64.tar.gz && \
     tar xfz wit-v3.05a-r8638-x86_64.tar.gz && \
