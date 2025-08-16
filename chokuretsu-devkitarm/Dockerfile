@@ -13,7 +13,3 @@ RUN wget https://haroohie.nyc3.cdn.digitaloceanspaces.com/bootstrap/ci-container
     rm xdelta3.zip && \
     chmod +x xdelta3 && \
     mv xdelta3 /bin/
-
-RUN wget https://bootstrap.pypa.io/pip/3.7/get-pip.py && \
-    python ./get-pip.py && \
-    pip install boto3
