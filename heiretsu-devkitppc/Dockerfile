@@ -8,7 +8,7 @@ RUN wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod
     apt update && \
     apt install -y powershell
 
-RUN apt install -y build-essential cmake dotnet-sdk-8.0 libfontconfig1 ffmpeg libavcodec-dev libavformat-dev libavutil-dev libswresample-dev libswscale-dev gcc g++ libevdev-dev libusb-1.0-0-dev libxrandr-dev libxi-dev libpangocairo-1.0-0 qt6-base-private-dev libqt6svg6-dev libbluetooth-dev libasound2-dev libpulse-dev libgl1-mesa-dev libcurl4-openssl-dev
+RUN apt install -y build-essential cmake dotnet-sdk-10.0 libfontconfig1 ffmpeg libavcodec-dev libavformat-dev libavutil-dev libswresample-dev libswscale-dev gcc g++ libevdev-dev libusb-1.0-0-dev libxrandr-dev libxi-dev libpangocairo-1.0-0 qt6-base-private-dev libqt6svg6-dev libbluetooth-dev libasound2-dev libpulse-dev libgl1-mesa-dev libcurl4-openssl-dev
 
 RUN apt install -y libudev-dev libsystemd-dev || apt install -y libeudev-dev
 
